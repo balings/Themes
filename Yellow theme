@@ -364,7 +364,7 @@
 	        {/block:Pagination}
 	        </div>
 	    
-	        Yellow theme by jvdmeulen.<br>
+	        <a href="http://balingshoek.tumblr.com/post/77700544713/">Yellow</a> theme by jvdmeulen.<br>
 	        Powered by <a href="http://www.tumblr.com/">Tumblr</a>.
 	    
 	        <form action="/search" method="get" id="searchform">
