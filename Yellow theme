@@ -56,6 +56,12 @@
         border-bottom: 2px solid {color:Border};
         margin-bottom: 150px;
         padding-bottom: 25px; }
+    
+    .desc a {
+        border-bottom: 1px solid #000000; }
+        
+    .desc a:hover {
+        border-bottom: 1px solid {color:Border}; }   
         
     .desc_links {
         text-align: center;
