@@ -1,386 +1,351 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
     <!--
+
+    Yellow Theme
+    © Jorien van der Meulen
+    Powered by Tumblr
     
-    Yellow Theme by jvdmeulen.
-    Powered by Tumblr.
- 
     -->
     
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    
     <title>{Title}</title>
+    
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     
+    {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+    {/block:Description} 
+
     <!-- Appearance Options -->
     
     <meta name="color:Background" content="#FFFFFF" />
     <meta name="color:Text" content="#000000" />
     <meta name="color:Links" content="#000000" />
+    <meta name="color:Hover" content="#FFFF00" />
     <meta name="color:Border" content="#FFFF00" />
     
     <meta name="if:Show Archive" content="1" />
     <meta name="if:Show RSS" content="1" />
     <meta name="if:Show tags" content="1" />
-
-    <meta name="text:Link 1" content="" />
-    <meta name="text:Link 2" content="" />
-    <meta name="text:Link 3" content="" />
-    <meta name="text:Label 1" content="" />
-    <meta name="text:Label 2" content="" />
-    <meta name="text:Label 3" content="" />
     
+    <meta name="text:Google Analytics ID" content="" />
+
 <style type="text/css">
 
+    /*General */
+
     body {
-        width: 500px;
         background: {color:Background};
-        font-family: 'Arial';
-        font-size: 12px;
+        width: 500px;
         color: {color:Text};
-        margin: 0 auto;
-        padding: 50px 0; }
+        font-family: 'Arial';
+        font-size: 14px;
+        padding: 50px 0;
+        margin: 0 auto; }
 
     a {
         color: {color:Links};
+        font-weight: bold;
         text-decoration: none; }
-    
-    /* Title, Description & Navigation */
-    
+
+    a:hover {
+        color: {color:Hover}; }
+        
+    /* Title, Description & Links */
+
     h1#blog_title {
-        font-size: 18px; }
-    
+        font-size: 32px; }
+
+    h1#blog_title a {
+        background: {color:Border};
+        padding: 15px; }
+
+    h1#blog_title a:hover {
+        background: #000000;
+        color: #ffffff;
+        padding: 15px; }
+  
     .desc {
-        border-bottom: 2px solid {color:Border};
-        margin-bottom: 150px;
-        padding-bottom: 25px; }
+        margin-bottom: 150px; }
     
-    .desc a {
-        border-bottom: 1px solid #000000; }
-        
-    .desc a:hover {
-        border-bottom: 1px solid {color:Border}; }   
-        
     .desc_links {
         text-align: center;
-        padding-top: 30px; }
+        padding-top: 40px; }
     
     .desc_links a {
-        border-bottom: 1px solid #000000;
         margin: 0 5px; }
     
-    .desc_links a:hover {
-        border-bottom: 1px solid {color:Border}; }
+    /* Content Container */
+    
+    #wrapper {
+        margin: 0px auto; }
         
     h1.tag_page_title {
-        font-size: 18px;
         text-align: center;
-        margin: -5px 0 50px 0; }
+        margin-bottom: 50px; }
     
-    /* Content */
-
-    .container {
-        width: 500px;
-        margin: 0px auto; }  
-
-    #content {
-        width: 500px; } 
-    
-    .post_title {
-        font-size: 14px;
-        letter-spacing: 1px; }    
+    /* Entries */
     
     .post {
-        width: 500px;
+        margin-bottom: 25px; }
+    
+    .post_footer {
+        font-size: 12px;
         margin-bottom: 150px; }
-        
-    .post a {
-        border-bottom: 1px solid #000000; }
-        
-    .post a:hover {
-       border-bottom: 1px solid {color:Border}; }
-
-    .post img {
-        max-width: 100%; }
-        
-    h1.quote {
-        font-size: 15px;
-        font-style: italic; } 
+    
+    .tags a {
+        padding-right: 5px; }
+    
+    /* Quote */
     
     .source {
         padding-left: 30px; }
-
-    h1.link a {
-        font-size: 16px;
-        font-weight: normal;
-        letter-spacing: 1px;
-        text-transform: uppercase; }
     
-    blockquote {
-        border-left: 2px solid {color:Border};
-        margin-left: 20px;
-        padding-left: 10px; }
-
-    ul.chat {
-        padding: 0px;
-        margin: 0px; }
-
+    /* Chat */
+    
     .chat li {
-        list-style-type: none;
-        padding-top: 10px; }
-
-    .player * {
-        width: 75%; }
-
-    h1.question {
-        display: block;
-        font-size: 18px; }
-    
-    .post_footer {
-        text-align: right;
-        border-top: 2px solid {color:Border};
-        margin-top: 15px;
-        padding-top: 15px; }
-    
-    .post_footer a {
-        border-bottom: 1px solid #000000; }
-        
-    .post_footer a:hover {
-        border-bottom: 1px solid {color:Border}; }
-    
-    .tags {
-        text-align: right;
-        margin-top: 10px; }
-
-    .tags a {
-        color: {color:Text};
-        border-bottom: 1px solid #000000; }
-        
-    .tags a:hover {
-        border-bottom: 1px solid {color:Border}; }
+        padding: 10px 0;
+        list-style-type: none; }
         
     /* Permalink Page */
     
     ol.notes {
-        margin: 20px 0 0 0;
-        padding: 0px; }
-        
-    ol.notes li img.avatar {
-        display: none; }
-
-    ol.notes li {
-        text-align: left;
-        list-style-type: none;
-        padding: 10px 0 10px 0; }
-        
-    ol.notes li a {
-        border-bottom: 1px solid #000000; }
-        
-    ol.notes li a:hover {
-        border-bottom: 1px solid {color:Border}; }
+        padding: 0px;
+        margin: 25px 0px;
+        list-style-type: none; }
     
-    ol.notes li a.more_notes_link {
-        text-transform: uppercase;
-        text-decoration: none;
-        border-bottom: 1px solid #000000; }
-
-    ol.notes li a.more_notes_link:hover {
-        border-bottom: 1px solid {color:Border}; }
+    ol.notes li.note {
+        padding: 0 0 40px 0; }
+    
+    ol.notes li.note img.avatar {
+        display: none; }
+        
+    /* Footer */
 
     #footer {
-        text-align: center;
-        border-top: 2px solid {color:Border};
-        padding-top: 20px; }
-    
-    #footer a {
-        border-bottom: 1px solid #000000; }
-    
-    #footer a:hover {
-        border-bottom: 1px solid {color:Border}; }
-    
+        text-align: center; }
+        
     #pagination {
-        padding-bottom: 30px; }
-    
+        margin-bottom: 50px; }
+        
     #searchform input {
-        border: 1px solid {color:Border};
-        outline: 0;
-        margin: 20px 0;
-        padding: 4px; }
+		background: {color:Background};
+		outline: 0;
+		border: 1px solid {color:Border};
+		padding: 3px;
+		margin-bottom: 40px; }
+        
+    #credit {
+        margin: 20px 0; }
 
-    {CustomCSS}
+{CustomCSS}
 
 </style>
 
 </head>
 
-    <div class="container">
-        
-        <h1 id="blog_title">{title}</h1>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="blog_title"><a href="/">{title}</a></h1>
+
 
         {block:Description}
             <div class="desc">
                 {Description}
-                    <div class="desc_links">
-                        <a href="/">Journal</a>
-                        {block:IfLink1}<a href="{text:Link 1}">{text:Label 1}</a>{/block:IfLink1}
-                        {block:IfLink2}<a href="{text:Link 2}">{text:Label 2}</a>{/block:IfLink2}
-                        {block:IfLink3}<a href="{text:Link 3}">{text:Label 3}</a>{/block:IfLink3}
-                        {block:IfShowArchive}<a href="/archive">Archive</a>{/block:IfShowArchive}
-                        {block:IfShowRss}<a href="/rss">RSS</a>{/block:IfShowRSS}
-                        {block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
-                    </div>
+                <div class="desc_links">
+                    {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
+                    {block:IfShowArchive}<a href="/archive">Archive</a>{/block:IfShowArchive}
+                    {block:IfShowRss}<a href="/rss">RSS</a>{/block:IfShowRSS}
+                    {block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
+                </div>
             </div>
         {/block:Description}
         
-        <div id="content">
-	
-	    {block:TagPage}
-	    	<h1 class="tag_page_title">&ldquo;{Tag}&rdquo;</h1>
+        {block:TagPage}
+            <h1 class="tag_page_title">Posts tagged "{Tag}"</h1>
         {/block:TagPage}
-
-	    {block:Posts}
-
-	        <div class="post">
-
-		    {block:Text}
-			{block:Title}
-				<h1 class="post_title">{Title}</h1>
-			{block:Title}
-			{Body}
-		    {/block:Text}
-
-		    {block:Photo}
-			<img src="{PhotoURL-500}" alt="{PhotoAlt}" class="photopost">
-			{block:Caption}
-				{Caption}
-			{/block:Caption}
-		    {/block:Photo}
-
-		    {block:Photoset}
-                <div class="photoset">
-                    <div class="photoset-grid" data-layout="{PhotosetLayout}">
-                        {block:Photos}
-                        <img src="{PhotoURL-HighRes}" {block:Caption}alt="{Caption}"{/block:Caption} />
-                        {/block:Photos}
-                    </div>
-
+        
+        {block:Posts}
+        
+        <div class="post">
+        
+        {block:Text}
+            <div class="post text">
+                {block:Title}
+                    <h1><a href="{Permalink}">{Title}</a></h1>
+                {/block:Title}{Body}
+            </div>
+        {/block:Text}
+        
+        {block:Photo}
+            <div class="post photo">
+                {LinkOpenTag}
+                    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                {LinkCloseTag}
                 {block:Caption}
-                    {Caption}
+                    <div class="caption">
+                        {Caption}
+                    </div>
                 {/block:Caption}
-                </div>
-            {/block:Photoset}
-
-		    {block:Quote}
-			<h1 class="quote">&ldquo;{Quote}&rdquo;</h1>
-			{block:Source}
-			    <div class="source">
-			        &mdash; {Source}
-			     </div>
-			{/block:Source}
-            {/block:Quote}
-            
-            {block:Link}
-			    <h1 class="link"><a title="" href="{URL}">{Name}</a></h1>
-			    {block:Description}
-			        {Description}
-			    {/block:Description}
-		    {/block:Link}
-
-            {block:Audio}
-		        <div class="player">
-					{AudioPlayerBlack}
-				</div>
-			{block:Caption}
-			    {Caption}
-			{block:Caption}
-		    {/block:Audio}
-
-		    {block:Chat}
-			{block:Title}<h1>{Title}</h1>{/block:Title}
-			<ul class="chat">
-				{block:Lines}
-				<li>{block:Label}<span class="label">{Label} </span>{/block:Label}{Line}</li>
-				{/block:Lines}
-			</ul>
-		    {/block:Chat}
-
-		    {block:Video}
-			{Video-500}
-			{block:Caption}
-			    {Caption}
-			{/block:Caption}
-		    {/block:Video}
-		    
-		    {block:Answer}
-			    <h1 class="question"><i>{Asker} asked:</i> {Question}</h1>
-				{Answer}
-		    {/block:Answer}
+            </div>
+        {/block:Photo}
         
-            {block:Date}
-                <div class="post_footer">
-                    Posted <a href="{Permalink}">{Month}, {Year}</a>
-                    {block:NoteCount}with <a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}<br>
-                    {block:ContentSource}Source: <a href="{SourceURL}">{SourceTitle}</a>,{/block:ContentSource}
-                    {block:RebloggedFrom}via <a href="{ReblogParentURL}" title="{ReblogParentTitle}" />{ReblogParentName}</a>{/block:RebloggedFrom}
-                </div>
-            {/block:Date}
+        {block:Photoset}
+            <div class="post photoset">
+                {Photoset-500}{block:Caption}
+                    <div class="caption">
+                        {Caption}
+                    </div>
+                {/block:Caption}
+            </div>
+        {/block:Photoset}
         
-            {block:IfShowtags}
-            {block:HasTags}
-                <div class="tags">
-                    Tags: {block:Tags} <a href="{TagURL}">{Tag}</a>{/block:Tags}
-                </div>
-            {/block:HasTags}
-            {/block:IfShowtags}
+        {block:Quote}
+            <div class="post quote">
+                <h1>"{Quote}"</h1>
+
+                {block:Source}
+                    <div class="source">&mdash; {Source}</div>
+                {/block:Source}
+            </div>
+        {/block:Quote}
         
-            {block:PermalinkPage}
-            {block:PostNotes} 
-                <div id="notes">
-                    {PostNotes}
+        {block:Link}
+            <div class="post link">
+                <h1><a href="{URL}" class="link" {Target}>{Name}</a></h1>
+
+                {block:Description}
+                    <div class="description">
+                        {Description}
+                    </div>
+                {/block:Description}
+            </div>
+        {/block:Link}
+        
+        {block:Chat}
+            <div class="post chat">
+                {block:Title}
+                    <h3><a href="{Permalink}">{Title}</a></h3>
+                {/block:Title}
+
+                <div class="chat">
+                    {block:Lines}
+                        <li><div class="{Alt} user_{UserNumber}">
+                            {block:Label}
+                                <span class="label">
+                                    {Label}
+                                </span>
+                            {/block:Label}{Line}
+                        </div></li>
+                    {/block:Lines}
                 </div>
+            </div>
+        {/block:Chat}
+        
+        {block:Video}
+            <div class="post video">
+                {Video-500}
+                {block:Caption}
+                    <div class="caption">
+                        {Caption}
+                    </div>
+                {/block:Caption}
+            </div>
+        {/block:Video}
+        
+        {block:Audio}
+            <div class="post audio">
+                {AudioPlayerBlack}
+                {block:Caption}
+                    <div class="caption">
+                        {Caption}
+                    </div>
+                {/block:Caption}
+            </div>
+        {/block:Audio}
+        
+        {block:Answer}
+            <div class="post question">         
+                <h1>{Asker}: {Question}</h1>
+                {Answer}
+            </div>
+        {/block:Answer}
+        
+        {block:Date}
+            <div class="post_footer">
+                Posted: <a href="{Permalink}">{Month}, {Year}</a>
+                {block:NoteCount}with <a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}<br>
+                {block:ContentSource}Source: <a href="{SourceURL}">{SourceTitle}</a>,{/block:ContentSource}
+                {block:RebloggedFrom}via <a href="{ReblogParentURL}" title="{ReblogParentTitle}" />{ReblogParentName}</a>{/block:RebloggedFrom}
+                
+                {block:IfShowtags}
+                {block:HasTags}
+                    <div class="tags">
+                        Tags: {block:Tags} <a href="{TagURL}">{Tag}</a>{/block:Tags}
+                    </div>
+                {/block:HasTags}
+                {/block:IfShowtags}
+            </div>
+        {/block:Date}
+        
+        {block:PermalinkPage}
+            {block:PostNotes}
+                {PostNotes}
             {/block:PostNotes} 
-            {/block:PermalinkPage}
-
-	        </div>
-
-	        {/block:Posts}
-	
-	    </div>
-	    
-	    <div id="footer">
-	        <div id="pagination">
-            {block:Pagination}
-		    {block:PreviousPage}
-                &#171; <a href="{PreviousPage}">Previous</a>
-            {/block:PreviousPage}
+        {/block:PermalinkPage}
         
-            {CurrentPage}/{TotalPages}
-		
-		    {block:NextPage}
-                <a href="{NextPage}">Next</a> &#187;
-            {/block:NextPage}
-	        {/block:Pagination}
-	        </div>
-	    
-	        <a href="http://balingshoek.tumblr.com/post/77700544713/">Yellow</a> theme by <a href="http://balingshoek.tumblr.com/">jvdmeulen</a>.<br>
-	        Powered by <a href="http://www.tumblr.com/">Tumblr</a>.
-	    
-	        <form action="/search" method="get" id="searchform">
-		        <input type="search" name="q" value="" results="5" />
-		    </form>
-		
+        {/block:Posts}
+        
         </div>
-
+        
+        {block:Pagination}
+        <div id="footer">
+            <div id="pagination">
+                {block:PreviousPage}
+                    <a href="{PreviousPage}">&#171; Previous</a>
+                {/block:PreviousPage}
+                {block:NextPage}
+                    <a href="{NextPage}">Next &#187;</a>
+                {/block:NextPage}
+            </div>
+            
+            <form action="/search" method="get" id="searchform">
+				<p><input type="search" name="q" value="" results="5" /></p>
+			</form>
+            
+            {CopyrightYears}
+            
+            <div id="credit">
+                Yellow Theme by Jorien van der Meulen.<br>
+                Powered by <a href="http://www.tumblr.com/">Tumblr</a>.
+            </div>
+        </div>
+        {/block:Pagination}
+        
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://static.tumblr.com/wgijwsy/jgemkyt9x/jquery.photoset-grid.min.js"></script>
-
-    <script>
-        $('.photoset-grid').photosetGrid();
+    {block:IfGoogleAnalyticsID}
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
     </script>
+    {/block:IfGoogleAnalyticsID}
 
 </body>
+
 </html>
