@@ -57,6 +57,11 @@
 
     a:hover {
         color: {color:Hover}; }
+       
+    hr {
+        border: 0;
+        background-color: {color:Border};
+        height: 2px; }
         
     /* Title, Description & Links */
 
