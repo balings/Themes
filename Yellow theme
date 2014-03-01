@@ -14,7 +14,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     
-    <title>{Title}</title>
+    <title>Balingshoek</title>
     
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -162,6 +162,7 @@
             <div class="desc">
                 {Description}
                 <div class="desc_links">
+                    <a href="/">Journal</a>
                     {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
                     {block:IfShowArchive}<a href="/archive">Archive</a>{/block:IfShowArchive}
                     {block:IfShowRss}<a href="/rss">RSS</a>{/block:IfShowRSS}
